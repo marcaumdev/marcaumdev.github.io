@@ -9,17 +9,28 @@
       content="Portfólio de Marcos Vinícius — desenvolvimento de software, dados, inteligência artificial e educação tecnológica."
     />
     <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content="Marcos Vinícius — Software, Dados & Educação" />
     <meta
       property="og:description"
       content="Projetos e experiências em desenvolvimento de software, dados, IA e educação tecnológica."
     />
     <meta name="twitter:card" content="summary" />
-    <title>Marcos Vinícius — Software, Dados & Educação</title>
-    <script type="module" crossorigin src="/assets/index-B6VZUhYp.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CGEEnQNm.css">
+    <title>marcaumdev</title>
+    <script>
+      (() => {
+        const params = new URLSearchParams(window.location.search);
+        const route = params.get("gh-pages-route");
+
+        if (route?.startsWith("/")) {
+          window.history.replaceState(null, "", route);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DnrG6YSa.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dypa3k5e.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>

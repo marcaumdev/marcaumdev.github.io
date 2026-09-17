@@ -4,60 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Página não encontrada — Marcos Vinícius</title>
-    <style>
-      :root {
-        color-scheme: light dark;
-        font-family: Inter, system-ui, sans-serif;
-      }
+    <title>Redirecionando — marcaumdev</title>
+    <script>
+      (() => {
+        const requestedRoute = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+        const redirectUrl = new URL("/", window.location.origin);
 
-      body {
-        display: grid;
-        min-height: 100vh;
-        margin: 0;
-        place-items: center;
-        background: #0b1220;
-        color: #f2f6fc;
-      }
-
-      main {
-        max-width: 36rem;
-        padding: 2rem;
-        text-align: center;
-      }
-
-      span {
-        color: #60a5fa;
-        font-weight: 800;
-      }
-
-      h1 {
-        margin: 0.5rem 0 1rem;
-        font-size: clamp(2rem, 8vw, 4rem);
-      }
-
-      p {
-        color: #aab7ca;
-      }
-
-      a {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: 0.8rem 1.2rem;
-        border-radius: 999px;
-        background: #60a5fa;
-        color: #071120;
-        font-weight: 800;
-        text-decoration: none;
-      }
-    </style>
+        redirectUrl.searchParams.set("gh-pages-route", requestedRoute);
+        window.location.replace(redirectUrl);
+      })();
+    </script>
   </head>
   <body>
-    <main>
-      <span>Erro 404</span>
-      <h1>Esta página não existe.</h1>
-      <p>O endereço pode ter mudado, mas o portfólio continua logo ali.</p>
-      <a href="/">Voltar ao portfólio</a>
-    </main>
+    <p>Redirecionando para o portfólio…</p>
   </body>
 </html>
